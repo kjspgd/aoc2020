@@ -1,0 +1,27 @@
+#!/usr/local/bin/python3
+
+def findNext(interval):
+   if 'x' not in interval:
+      testingInterval = 0
+      global myTimestamp
+      while testingInterval < myTimestamp:
+         testingInterval += int(interval)
+      #input("The last interval we tested is " + str(testingInterval)) 
+      myWait = int(testingInterval) - int(myTimestamp)
+      myProduct = int(interval) * myWait
+      print("Bus ID " + str(interval) + " wait is " + str(myWait) + " with a product of " + str(myProduct)) 
+
+
+
+
+myTimestamp = 0
+myBuses = []
+i = 0
+for line in open("input.txt"):
+   if i==0: myTimestamp = int((line.rstrip()))
+   else: myBuses = line.rstrip().split(",")
+   i+=1
+print("My timestamp is " + str(myTimestamp))
+print("My buses are " + str(myBuses))
+for item in myBuses:
+   if 'x' not in item : findNext(item)
