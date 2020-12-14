@@ -1,0 +1,1 @@
+Minus 1/2 point on part b.  I was really stuck here, so I did go in search of some approaches from /r/adventofcode.  I don't really understand cs-speak, so that had limited benefit.  I did read about the notion of breaking it into chunks which sstuck with me and I got it working in my code. 
