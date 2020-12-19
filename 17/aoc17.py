@@ -112,7 +112,7 @@ iters = 6
 lookupIndex = {}
 
 
-for line in open("input.txt"):
+for line in open("input_sample.txt"):
    theLines.append(line.rstrip())
 
 gridDimension = len(theLines) + (2 * iters) + 2 
